@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Orbital Dash</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game-wrap">
+  <canvas id="game" width="400" height="600"></canvas>
+
+  <button id="mute-btn">Sound: On</button>
+  <button id="fire-btn" class="hidden">Fire</button>
+
+  <div id="start-screen" class="overlay">
+    <h1>Orbital Dash</h1>
+    <p class="tagline">Blast through the belt. Beat your best.</p>
+    <p class="story">
+      A lone alien is trying to fly home, and their little scout ship just wandered into a chaotic asteroid
+      belt. Help them navigate it back to safety! Thrust up or down to dodge incoming rocks, or fire the
+      onboard laser to blast them to dust for bonus points. Get too close, or drift off-field, and the trip
+      home ends right there.
+    </p>
+    <div class="controls">
+      <div class="control-row"><span class="key">&uarr; / W</span><span>Thrust up</span></div>
+      <div class="control-row"><span class="key">&darr; / S</span><span>Thrust down</span></div>
+      <div class="control-row"><span class="key">Space</span><span>Fire laser</span></div>
+    </div>
+    <p class="hint">Mobile: tap top/bottom to steer &nbsp;·&nbsp; use Fire to blast</p>
+    <button id="start-btn">Start Mission</button>
+    <p class="credit">Made by ohmygod studios</p>
+  </div>
+
+  <div id="gameover-screen" class="overlay hidden">
+    <h1 class="gameover-title">GAME OVER</h1>
+    <p>Score: <span id="final-score">0</span></p>
+    <p>High Score: <span id="final-high-score">0</span></p>
+    <button id="restart-btn">Restart</button>
+  </div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
